@@ -258,8 +258,12 @@ namespace GraficadorSeñales
                 case 1: // multiplicar
                     señalResultado = Señal.multiplicacion(señal, señal_2);
                     break;
+                case 2: //Convolución
+                    señalResultado = Señal.convolucionar(señal, señal_2);
+                    break;
                 default:
                     break;
+                
             }
             señalResultado.actualizarAmplitudMaxima();
             plnGrafica_Resultado.Points.Clear();
