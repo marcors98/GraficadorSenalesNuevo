@@ -17,6 +17,7 @@ namespace GraficadorSeñales
         public double TiempoInicial { get; set; }
         public double TiempoFinal { get; set; }
         public double Alpha { get; set; }
+        public double Tiempo { get; set; }
 
         abstract public double evaluar(double tiempo);
 
@@ -149,7 +150,7 @@ namespace GraficadorSeñales
                 }
                 Muestra muestra = new Muestra(instanteActual, valorMuestra);
                 resultado.Muestras.Add(muestra);
-                instanteActual *= periodoMuestreo;
+                instanteActual += periodoMuestreo;
             }
 
             return resultado;
